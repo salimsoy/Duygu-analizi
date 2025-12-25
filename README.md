@@ -30,7 +30,9 @@ Avantajları
 - Esneklik: Hem canlı kamera görüntüsü hem de hazır video dosyaları üzerinde çalışabilir.
 
 Kodun Çalışma Prensibi
+
 Uygulama iki ana sınıftan oluşur:
+
 FaceDetection Sınıfı:
 - OpenCV'nin haarcascade_frontalface_default.xml dosyasını kullanır.
 - Görüntüyü gri tonlamaya çevirir ve yüz koordinatlarını bulur.
