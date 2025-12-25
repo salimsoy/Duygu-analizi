@@ -13,7 +13,8 @@ Facebook, Google ve VGG-Face gibi modelleri barındıran, yüz tanıma ve duygu 
 ## Pandas & Matplotlib
 Elde edilen duygu verilerini zaman damgasıyla birlikte yapısal olarak saklamak (CSV) ve analiz bitiminde grafiksel olarak görselleştirmek için kullanılır.
 
-** Temel Mantık **
+
+**Temel Mantık**
 Kod, kullanıcıdan alınan girdiye (Webcam veya Video) göre kare kare (frame-by-frame) işleme yapar ve aşağıdaki adımları izler:
 
 - Hazırlık: Haar Cascade sınıflandırıcısı ve DeepFace modelleri belleğe yüklenir.
