@@ -15,6 +15,7 @@ Elde edilen duygu verilerini zaman damgasıyla birlikte yapısal olarak saklamak
 
 
 **Temel Mantık**
+
 Kod, kullanıcıdan alınan girdiye (Webcam veya Video) göre kare kare (frame-by-frame) işleme yapar ve aşağıdaki adımları izler:
 
 - Hazırlık: Haar Cascade sınıflandırıcısı ve DeepFace modelleri belleğe yüklenir.
