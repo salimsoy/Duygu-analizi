@@ -1,5 +1,7 @@
 # Akıllı Yüz İfadesi Analizi ve Duygu Tanıma Sistemi
 Bu projede, gerçek zamanlı olarak çalışan bir sistem geliştirdik. Alınan görüntüler üzerinde yüz tespiti yaptık. Tespit edilen yüzlerdeki ifadeleri analiz ederek hangi duyguların (mutlu, üzgün, şaşkın, kızgın vs.) ön planda olduğunu tahmin ettik. Sonrasında bu tahminleri kullanıcıya grafiklerle gösteriyoruz.
+Porje özetle şu şekilde çalışıyor:
+Bu proje, OpenCV ve DeepFace kütüphanelerini kullanarak gerçek zamanlı yüz tespiti ve duygu analizi gerçekleştiren hibrit bir Python uygulamasıdır. Sistem, performans optimizasyonu sağlamak amacıyla sadece bir yüz tespit edildiğinde duygu analizi motorunu devreye sokar. Yüzün algılanmadığı durumlarda derin öğrenme modeli tetiklenmez, bu sayede işlemci kaynakları gereksiz yere tüketilmez.
 Bu projede görüntü işleme ve derin öğrenme tabanlı iki temel yaklaşım kullanılmaktadır:
 
 ## Haar Cascade Algoritması 
