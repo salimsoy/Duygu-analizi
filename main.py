@@ -18,14 +18,35 @@ class SentimentAnalysis:
         self.df = pd.DataFrame(self.feeling_log)
         self.df.to_csv('gunluk_rapor.csv')
         print("Rapor kaydedildi.")
+    
+    
+    def drawing_analysis(self):
+       try:
+           plt.figure(figsize=(8, 5))
+           self.df['Duygu'].value_counts().plot(kind='bar', color='orange')
+           plt.title('Duygu Analizi Sonuçları')
+           plt.savefig('analiz_sonucu.png')
+           plt.show()
+
+       except Exception as e:
+           print(e)
         
     
-    def drawing(self):
+    def drawing_emotion_time(self):
         try:
-            plt.figure(figsize=(8, 5))
-            self.df['Duygu'].value_counts().plot(kind='bar', color='orange')
-            plt.title('Duygu Analizi Sonuçları')
-            plt.savefig('analiz_sonucu.png')
+            plt.figure(figsize=(15, 6))
+        
+            plt.bar(self.df["Zaman"], self.df['Duygu'], color='orange')
+            
+            plt.title('Zaman İçinde Duygu Değişimi')
+            plt.xlabel('Zaman')
+            plt.ylabel('Duygu')
+            
+            plt.xticks(rotation=45)
+            plt.grid(True, alpha=0.5) 
+            plt.tight_layout()
+            
+            plt.savefig('duygu_zaman_grafiği.png')
             plt.show()
 
         except Exception as e:
@@ -99,7 +120,8 @@ class SentimentAnalysis:
             
         self.saves()
         
-        self.drawing()
+        self.drawing_analysis()
+        self.drawing_emotion_time()
         
         
 if __name__ == "__main__":
